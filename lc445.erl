@@ -1,4 +1,5 @@
-%% leetcode 445, add two numbers ii
+% leetcode 445
+% add two numbers ii
 
 -module(lc445).
 -export([start/0]).
@@ -66,5 +67,6 @@ start() ->
   L2_6 = #list_node{ val = 6, next = L2_4},
   L2_5 = #list_node{ val = 5, next = L2_6},
 
-  A = add_two_numbers(L1_7, L2_5),
-  io:format("A: ~p~n", [A]). % expect [7,8,0,7]
+  {list_node,7,{list_node,8,{list_node,0,{list_node,7,null}}}} = add_two_numbers(L1_7, L2_5), % [7,8,0,7]
+  ok.
+
